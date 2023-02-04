@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <h1 style="text-align: center">My ToDo Application</h1>
+      <div class="functional">
+        <form autocomplete="off" class="functional__control">
+          <label for="">
+            <input
+              class="functional__input"
+              type="text"
+              name="todo"
+              placeholder="New Todo"
+            />
+          </label>
+          <select class="functional__select" name="user">
+            <option disabled selected>Select User</option>
+          </select>
+          <button class="functional__button">Add Task</button>
+        </form>
+      </div>
+      <ul class="todoList"></ul>
+    </div>
+  </body>
+
+  <style>
+    .app {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .functional__control {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    .functional {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+    }
+    .todoList {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+    }
+    .todoItem {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      text-align: left;
+      border: 1px solid rgb(211, 211, 211);
+      border-radius: 5px;
+    }
+    .todoItem button {
+      background-color: transparent;
+      border: 1px solid transparent;
+      font-size: 20px;
+    }
+    .todoItem button:hover {
+      color: red;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .functional__input {
+      padding: 10px;
+    }
+    .functional__button {
+      margin-top: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: transparent;
+      color: #333;
+      border: 1px solid #333;
+    }
+    .functional__button:hover {
+      color: white;
+      background-color: #333;
+      border: 1px solid transparent;
+    }
+    .functional__select {
+      padding: 10px;
+    }
+  </style>
+  <script src="./index.js"></script>
+</html>
